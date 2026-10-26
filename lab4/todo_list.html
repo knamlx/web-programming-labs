@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Практическая работа 4 — знакомство с базовыми тегами HTML">
+  <title>Список дел</title>
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="todo-body">
+
+<main>
+  <div class="container">
+    <div id="newtask">
+      <label class="visually-hidden" for="task-input">Описание задачи</label>
+      <input id="task-input" type="text" placeholder="Введите описание задачи">
+      <button id="push" type="button" aria-label="Добавить задачу" title="Добавить задачу"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+    </div>
+    <div id="tasks"></div>
+  </div>
+</main>
+<script src="js/todo.js"></script>
+</body>
+</html>

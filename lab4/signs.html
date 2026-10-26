@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Практическая работа 4 — знакомство с базовыми тегами HTML">
+  <title>Дорожные знаки</title>
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="css/signs.css">
+</head>
+<body class="">
+
+<main class="page">
+  <section class="sign-board" aria-label="Пятнадцать дорожных знаков">
+  <p class="sign-row">
+    <img class="tooltip" src="img/signs/1_10.svg" alt="Выезд на набережную" data-hint="Выезд на набережную" tabindex="0" width="112" height="112">
+    <img class="tooltip" src="img/signs/1_15.svg" alt="Скользкая дорога" data-hint="Скользкая дорога" tabindex="0" width="112" height="112">
+    <img class="tooltip" src="img/signs/1_21.svg" alt="Двустороннее движение" data-hint="Двустороннее движение" tabindex="0" width="112" height="112">
+    <img class="tooltip" src="img/signs/1_27.svg" alt="Дикие животные" data-hint="Дикие животные" tabindex="0" width="112" height="112">
+    <img class="tooltip" src="img/signs/1_29.svg" alt="Боковой ветер" data-hint="Боковой ветер" tabindex="0" width="112" height="112">
+  </p>
+  <p class="sign-row">
+    <img class="tooltip" src="img/signs/2_1.svg" alt="Главная дорога" data-hint="Главная дорога" tabindex="0" width="112" height="112">
+    <img class="tooltip" src="img/signs/2_3_1.svg" alt="Пересечение с второстепенной дорогой" data-hint="Пересечение с второстепенной дорогой" tabindex="0" width="112" height="112">
+    <img class="tooltip" src="img/signs/2_5.svg" alt="Движение без остановки запрещено" data-hint="Движение без остановки запрещено" tabindex="0" width="112" height="112">
+    <img class="tooltip" src="img/signs/2_6.svg" alt="Преимущество встречного движения" data-hint="Преимущество встречного движения" tabindex="0" width="112" height="112">
+    <img class="tooltip" src="img/signs/2_7.svg" alt="Преимущество перед встречным движением" data-hint="Преимущество перед встречным движением" tabindex="0" width="112" height="112">
+  </p>
+  <p class="sign-row">
+    <img class="tooltip" src="img/signs/3_11.svg" alt="Ограничение массы" data-hint="Ограничение массы" tabindex="0" width="112" height="112">
+    <img class="tooltip" src="img/signs/3_4.svg" alt="Движение грузовых автомобилей запрещено" data-hint="Движение грузовых автомобилей запрещено" tabindex="0" width="112" height="112">
+    <img class="tooltip" src="img/signs/3_10.svg" alt="Движение пешеходов запрещено" data-hint="Движение пешеходов запрещено" tabindex="0" width="112" height="112">
+    <img class="tooltip" src="img/signs/3_13.svg" alt="Ограничение высоты" data-hint="Ограничение высоты" tabindex="0" width="112" height="112">
+    <img class="tooltip" src="img/signs/3_19.svg" alt="Разворот запрещён" data-hint="Разворот запрещён" tabindex="0" width="112" height="112">
+  </p>
+  </section>
+</main>
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+<script>
+$(function () {
+    $(document).tooltip({
+        items: 'img',
+        content: function () {
+            var $element = $(this);
+            if ($element.is('img')) {
+                return $element.data('hint');
+            }
+        }
+    });
+});
+</script>
+</body>
+</html>

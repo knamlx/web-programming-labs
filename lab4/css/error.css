@@ -1,0 +1,28 @@
+/* Макет и иллюстрация из предоставленного SVG 404 - 5.svg. */
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #fff; color: #2a464f; font-family: Arial, sans-serif; }
+.error-page { width: min(952px, calc(100% - 48px)); min-height: 780px; display: flex; align-items: center; background: url('../img/backgrounds/404-illustration.svg') right center / 476px 476px no-repeat; }
+.error-text { width: 400px; }
+h1 { display: flex; align-items: baseline; gap: 9px; margin: 0 0 12px; font-weight: normal; }
+.error-code { font-size: 60px; font-weight: 700; line-height: 1; }
+.dot { font-size: 28px; font-weight: normal; }
+.error-label { color: #c2c6cf; font-size: 28px; }
+.message { margin: 16px 0 12px; font-size: 28px; line-height: 1.42; }
+.return { margin: 10px 0 0; color: #c2c6cf; font-size: 26px; line-height: 1.5; }
+a { color: #d269cc; text-underline-offset: 5px; text-decoration-thickness: 1px; }
+a:hover { color: #ad42a7; }
+a:focus-visible { outline: 2px solid #d269cc; outline-offset: 5px; }
+@media (max-width: 1000px) {
+  .error-page { background-size: 46% auto; min-height: 100vh; }
+  .error-text { width: 50%; }
+  .message { font-size: 25px; }
+  .return { font-size: 23px; }
+}
+@media (max-width: 650px) {
+  .error-page { width: calc(100% - 40px); min-height: 720px; align-items: flex-start; padding-top: 65px; padding-bottom: 350px; background-position: center bottom 25px; background-size: 320px 320px; }
+  .error-text { width: 100%; }
+  .error-code { font-size: 54px; }
+  .error-label { font-size: 26px; }
+  .message { font-size: 24px; }
+  .return { font-size: 22px; }
+}
