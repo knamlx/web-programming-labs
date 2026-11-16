@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ценообразование — Практическая работа 7</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="layout.js" defer></script>
+</head>
+<body>
+  <header class="page-header">
+    <a class="brand" href="#pricing">Тарифы</a>
+    <fieldset class="view-switch" hidden>
+      <legend class="visually-hidden">Представление страницы</legend>
+      <label><input type="radio" name="view" value="desktop"><span>Desktop</span></label>
+      <label><input type="radio" name="view" value="mobile"><span>Mobile</span></label>
+    </fieldset>
+  </header>
+
+  <main class="pricing" id="pricing">
+    <h1>Ценообразование</h1>
+    <p class="intro">Выберите план, соответствующий вашим потребностям</p>
+
+    <section class="plans" aria-label="Тарифные планы">
+      <article class="plan plan--basic">
+        <h2>Базовый план</h2>
+        <div class="plan-rate">
+          <p class="price">190<br>рублей</p>
+          <p class="billing"><strong>Помесячно</strong>Скидка 10% на годовую подписку</p>
+        </div>
+        <p>Подходит тем, кому нужен быстрый доступ к основным функциям.</p>
+        <button class="choose" type="button" data-plan="Базовый план" aria-pressed="false">Выбрать план</button>
+      </article>
+
+      <article class="plan plan--pro">
+        <h2>Профессиональный план</h2>
+        <div class="plan-rate">
+          <p class="price">490<br>рублей</p>
+          <p class="billing"><strong>Помесячно</strong>Скидка 10% на годовую подписку</p>
+        </div>
+        <p>Для тех, кому нужны расширенные функции и инструменты для работы с проектами.</p>
+        <button class="choose" type="button" data-plan="Профессиональный план за 490 рублей" aria-pressed="false">Выбрать план</button>
+        <ul class="features">
+          <li>500 записей в базе данных</li>
+          <li>20 ГБ хранилища</li>
+          <li>Интеграции с внешними сервисами</li>
+          <li>Премиум-шаблоны</li>
+          <li>Встроенная аналитика</li>
+          <li>Приоритетная поддержка</li>
+          <li>SSL-сертификат включён</li>
+        </ul>
+      </article>
+
+      <article class="plan plan--team">
+        <h2>Профессиональный план</h2>
+        <div class="plan-rate">
+          <p class="price">990<br>рублей</p>
+          <p class="billing"><strong>Помесячно</strong>Скидка 10% на годовую подписку</p>
+        </div>
+        <p>Расширенный тариф для команд, которым нужны инструменты совместной работы и больше ресурсов.</p>
+        <button class="choose" type="button" data-plan="Профессиональный план за 990 рублей" aria-pressed="false">Выбрать план</button>
+      </article>
+    </section>
+    <p class="selection" role="status"></p>
+  </main>
+</body>
+</html>
