@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Основы HTML5 — Вектор</title>
+  <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
+</head>
+<body>
+  <a class="visually-hidden-focusable position-absolute start-0 top-0 z-3 bg-white p-2" href="#lesson">К уроку</a>
+  <header class="topbar">
+    <nav class="navbar container-fluid workspace gap-2" aria-label="Верхняя панель">
+      <a class="navbar-brand brand d-inline-flex align-items-center gap-2" href="#lesson">
+        <span class="brand-mark" aria-hidden="true">В</span> Вектор<span class="brand-divider d-none d-sm-inline">Учебный кабинет</span>
+      </a>
+      <div class="d-flex align-items-center gap-2 ms-auto">
+        <div class="dropdown">
+          <button class="btn search-button" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="search-icon" aria-hidden="true"></span><span class="d-none d-sm-inline ms-2">Поиск по курсу</span>
+            <span class="visually-hidden d-sm-none">Поиск по курсу</span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#lesson">Текущий урок</a></li>
+            <li><a class="dropdown-item" href="#program">Программа курса</a></li>
+            <li><a class="dropdown-item" href="#resources">Материалы и задания</a></li>
+          </ul>
+        </div>
+        <div class="dropdown">
+          <button class="btn profile-button dropdown-toggle d-flex align-items-center gap-2" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Профиль Надежды">
+            <span class="profile-avatar" aria-hidden="true">НК</span><span class="d-none d-lg-inline">Надежда</span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><span class="dropdown-item-text fw-semibold">Надежда Короткова</span></li>
+            <li><a class="dropdown-item" href="#progress">Мои достижения</a></li>
+          </ul>
+        </div>
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#course-nav" aria-controls="course-nav" aria-expanded="false" aria-label="Меню кабинета">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container-fluid workspace py-3 py-lg-4">
+    <div class="row g-4 align-items-start">
+      <aside class="col-12 col-lg-2">
+        <nav class="collapse d-lg-block side-nav" id="course-nav" aria-label="Разделы кабинета">
+          <p class="side-label">Мой кабинет</p>
+          <div class="nav nav-pills flex-column gap-1">
+            <a class="nav-link active" href="#lesson" aria-current="page"><span aria-hidden="true">▦</span> Мои курсы</a>
+            <a class="nav-link" href="#recommendations"><span aria-hidden="true">◈</span> Каталог</a>
+            <a class="nav-link" href="#assignment"><span aria-hidden="true">▤</span> Задания</a>
+            <a class="nav-link" href="#progress"><span aria-hidden="true">✧</span> Достижения</a>
+          </div>
+          <div class="side-course mt-4">
+            <p class="side-label">Текущий курс</p>
+            <a href="#program">Веб-разработка <span aria-hidden="true">↗</span></a>
+            <small>Модуль 2 из 5</small>
+          </div>
+        </nav>
+      </aside>
+
+      <main class="col-12 col-lg-10" id="lesson">
+        <div class="row g-4">
+          <div class="col-12 col-xl-8">
+            <nav aria-label="Положение в курсе">
+              <ol class="breadcrumb small mb-3">
+                <li class="breadcrumb-item"><a href="#program">Веб-разработка</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Модуль 2</li>
+              </ol>
+            </nav>
+            <h1>Основы HTML5</h1>
+            <p class="lesson-intro">Урок 7. Структура HTML-документа и семантические элементы</p>
+            <div class="d-flex flex-wrap gap-2 mb-3">
+              <span class="badge tag-primary">HTML5</span>
+              <span class="badge tag-neutral">Начальный уровень</span>
+              <span class="badge tag-neutral">28 мин</span>
+            </div>
+
+            <figure class="lesson-cover ratio ratio-16x9 mb-4">
+              <img src="images/lesson.png" alt="Преподаватель в студии рядом с монитором с кодом" width="1672" height="941">
+              <figcaption>
+                <span class="cover-type">Видеоурок · 28 мин</span>
+                <strong>Структура HTML-документа</strong>
+                <span class="cover-note">Обложка занятия</span>
+              </figcaption>
+            </figure>
+
+            <section class="card resources" id="resources" aria-label="Содержимое урока">
+              <div class="card-header px-3 px-md-4 pt-3">
+                <div class="nav nav-tabs flex-wrap" id="lesson-tabs" role="tablist" aria-label="Разделы урока">
+                  <button class="nav-link active" id="materials-tab" data-bs-toggle="tab" data-bs-target="#materials" type="button" role="tab" aria-controls="materials" aria-selected="true">Материалы</button>
+                  <button class="nav-link" id="tasks-tab" data-bs-toggle="tab" data-bs-target="#tasks" type="button" role="tab" aria-controls="tasks" aria-selected="false">Задания</button>
+                  <button class="nav-link" id="discussion-tab" data-bs-toggle="tab" data-bs-target="#discussion" type="button" role="tab" aria-controls="discussion" aria-selected="false">Обсуждение</button>
+                </div>
+              </div>
+              <div class="card-body p-3 p-md-4 tab-content">
+                <div class="tab-pane fade show active" id="materials" role="tabpanel" aria-labelledby="materials-tab" tabindex="0">
+                  <h2 class="h5">О занятии</h2>
+                  <p>Разберём обязательные части HTML-документа и научимся выделять шапку, навигацию, основное содержимое и подвал с помощью семантических элементов.</p>
+                  <div class="list-group list-group-flush">
+                    <a class="list-group-item list-group-item-action px-0" href="https://developer.mozilla.org/ru/docs/Learn_web_development/Core/Structuring_content/Structuring_documents">Структура документа и сайта <span aria-hidden="true">↗</span></a>
+                    <a class="list-group-item list-group-item-action px-0" href="https://developer.mozilla.org/ru/docs/Web/HTML/Reference/Elements">Справочник элементов HTML <span aria-hidden="true">↗</span></a>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="tasks" role="tabpanel" aria-labelledby="tasks-tab" tabindex="0">
+                  <h2 class="h5">Практика после урока</h2>
+                  <p>Сверстайте страницу учебного курса. Добавьте шапку, навигацию по разделам, основную статью и подвал.</p>
+                  <p class="mb-0">Критерии проверки приведены в карточке «Практическое задание» ниже.</p>
+                </div>
+                <div class="tab-pane fade" id="discussion" role="tabpanel" aria-labelledby="discussion-tab" tabindex="0">
+                  <h2 class="h5">Обсуждение урока</h2>
+                  <p class="mb-1"><strong>Анна Морозова</strong> <time class="small text-secondary ms-2" datetime="2026-11-12">12 ноября</time></p>
+                  <p>Когда лучше использовать section, а когда article?</p>
+                  <p class="mb-0"><strong>Алексей Волков</strong> · <span>Article подходит для самостоятельного материала. Section объединяет содержимое по теме и обычно имеет свой заголовок.</span></p>
+                </div>
+              </div>
+            </section>
+
+            <div class="row g-3 mt-1">
+              <section class="col-12 col-md-6" id="assignment">
+                <div class="card h-100">
+                  <div class="card-body p-3 p-xl-4">
+                    <span class="badge tag-primary mb-2">Практика</span>
+                    <h2 class="h5">Практическое задание</h2>
+                    <p class="mb-2">Соберите каркас страницы курса из семантических элементов.</p>
+                    <ul class="mb-0 ps-3">
+                      <li>Один main и один заголовок h1</li>
+                      <li>Ссылки внутри nav</li>
+                      <li>Контакты курса в footer</li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+              <section class="col-12 col-md-6" aria-labelledby="teacher">
+                <div class="card h-100">
+                  <div class="card-body p-3 p-xl-4">
+                    <h2 class="h6 text-secondary mb-3" id="teacher">Преподаватель</h2>
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                      <span class="teacher-avatar" aria-hidden="true"><img src="images/lesson.png" alt=""></span>
+                      <div><strong>Алексей Волков</strong><br><span class="small text-secondary">Frontend-разработчик</span></div>
+                    </div>
+                    <p class="mb-0">Ведёт модуль по HTML и помогает разбирать структуру учебных проектов.</p>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <aside class="col-12 col-xl-4">
+            <div class="row g-3">
+              <section class="col-12 col-md-5 col-xl-12" id="progress">
+                <div class="card progress-card">
+                  <div class="card-body p-3 p-xl-4">
+                    <div class="d-flex justify-content-between align-items-center gap-2 mb-2">
+                      <h2 class="h6 mb-0">Ваш прогресс</h2>
+                      <span class="badge tag-primary">Курс</span>
+                    </div>
+                    <strong class="progress-value">35%</strong>
+                    <div class="progress my-2" role="progressbar" aria-label="Прогресс курса" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">
+                      <div class="progress-bar"></div>
+                    </div>
+                    <p class="small text-secondary mb-0">Пройдено 7 из 20 уроков</p>
+                  </div>
+                </div>
+              </section>
+
+              <section class="col-12 col-md-7 col-xl-12" id="program">
+                <div class="card program-card">
+                  <div class="card-body p-3 p-xl-4 pb-xl-3">
+                    <h2 class="h5 mb-1">Программа курса</h2>
+                    <p class="small text-secondary mb-0">5 модулей · 20 уроков</p>
+                  </div>
+                  <div class="accordion accordion-flush" id="modules">
+                    <div class="accordion-item">
+                      <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module-one" aria-expanded="false" aria-controls="module-one">1. Введение в веб</button></h3>
+                      <div id="module-one" class="accordion-collapse collapse" data-bs-parent="#modules">
+                        <ul class="list-group list-group-flush lesson-list">
+                          <li class="list-group-item"><span>Как устроен веб</span><small>18 мин · Готово</small></li>
+                          <li class="list-group-item"><span>Инструменты разработчика</span><small>22 мин · Готово</small></li>
+                          <li class="list-group-item"><span>Запросы HTTP</span><small>24 мин · Готово</small></li>
+                          <li class="list-group-item"><span>Работа с Git</span><small>30 мин · Готово</small></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#module-two" aria-expanded="true" aria-controls="module-two">2. Основы HTML5</button></h3>
+                      <div id="module-two" class="accordion-collapse collapse show" data-bs-parent="#modules">
+                        <ul class="list-group list-group-flush lesson-list">
+                          <li class="list-group-item"><span>Первый HTML-файл</span><small>16 мин · Готово</small></li>
+                          <li class="list-group-item"><span>Текст и ссылки</span><small>20 мин · Готово</small></li>
+                          <li class="list-group-item current-lesson" aria-current="step"><span>Структура документа</span><small>28 мин · <span class="badge tag-primary">Текущий</span></small></li>
+                          <li class="list-group-item"><span>Семантика страницы</span><small>24 мин · Готово</small></li>
+                          <li class="list-group-item"><span>Формы в HTML</span><small>30 мин</small></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module-three" aria-expanded="false" aria-controls="module-three">3. Основы CSS</button></h3>
+                      <div id="module-three" class="accordion-collapse collapse" data-bs-parent="#modules">
+                        <ul class="list-group list-group-flush lesson-list">
+                          <li class="list-group-item"><span>Селекторы и каскад</span><small>26 мин</small></li>
+                          <li class="list-group-item"><span>Цвет и типографика</span><small>22 мин</small></li>
+                          <li class="list-group-item"><span>Блочная модель</span><small>24 мин</small></li>
+                          <li class="list-group-item"><span>Позиционирование</span><small>29 мин</small></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module-four" aria-expanded="false" aria-controls="module-four">4. Адаптивная вёрстка</button></h3>
+                      <div id="module-four" class="accordion-collapse collapse" data-bs-parent="#modules">
+                        <ul class="list-group list-group-flush lesson-list">
+                          <li class="list-group-item"><span>Flexbox</span><small>27 мин</small></li>
+                          <li class="list-group-item"><span>CSS Grid</span><small>29 мин</small></li>
+                          <li class="list-group-item"><span>Медиазапросы</span><small>23 мин</small></li>
+                          <li class="list-group-item"><span>Тестирование интерфейса</span><small>20 мин</small></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module-five" aria-expanded="false" aria-controls="module-five">5. Bootstrap 5</button></h3>
+                      <div id="module-five" class="accordion-collapse collapse" data-bs-parent="#modules">
+                        <ul class="list-group list-group-flush lesson-list">
+                          <li class="list-group-item"><span>Сетка Bootstrap</span><small>25 мин</small></li>
+                          <li class="list-group-item"><span>Компоненты интерфейса</span><small>31 мин</small></li>
+                          <li class="list-group-item"><span>Учебный проект</span><small>35 мин</small></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="col-12" id="recommendations">
+                <div class="card">
+                  <div class="card-body p-3 p-xl-4">
+                    <h2 class="h6 mb-3">Рекомендуем дальше</h2>
+                    <p class="fw-semibold mb-1">Формы в HTML</p>
+                    <p class="small text-secondary mb-2">30 мин · Основы HTML5</p>
+                    <p class="mb-0">Соберите форму с подписями полей и встроенной проверкой значений.</p>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </aside>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container-fluid workspace py-4 d-flex flex-wrap align-items-center justify-content-between gap-3">
+      <div><strong>Вектор</strong><span class="small ms-2">Учебная платформа</span></div>
+      <nav class="d-flex flex-wrap gap-3 small" aria-label="Ссылки в подвале">
+        <a href="#lesson">К уроку</a><a href="#program">Программа курса</a>
+      </nav>
+      <small>Практическая работа № 8 · 2026</small>
+    </div>
+  </footer>
+</body>
+</html>
